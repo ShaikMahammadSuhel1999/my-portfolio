@@ -108,7 +108,7 @@
                 </h1>
                 <!-- The text below is centered using a max-w and mx-auto on the paragraph element itself -->
                 <p class="text-lg sm:text-xl text-custom-text-secondary max-w-2xl mx-auto">
-                    An Industrial Engineering professional specializing in Supply Chain Management and Operational Excellence, dedicated to optimizing systems and driving productivity.
+                    An Industrial Engineering professional specializing in Supply Chain Management and Operations Research, dedicated to optimizing systems and driving productivity.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                     <!-- CV Download Button (Updated to a proper anchor tag) -->
@@ -293,7 +293,7 @@
             <h2 class="text-3xl font-bold text-center text-white mb-12">Get in Touch</h2>
             <div class="flex flex-col items-center gap-6">
                 <!-- Contact Info -->
-                <p class="text-custom-text-secondary leading-relaxed text-center">I'm currently open to new opportunities and collaborations. Feel free to connect with me on social media.</p>
+                <p class="text-custom-text-secondary leading-relaxed text-center">I'm currently open to new opportunities and collaborations. Feel free to connect with me on social media or send me a message directly below.</p>
                 
                 <!-- Contact Details -->
                 <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
@@ -318,6 +318,20 @@
                     <a href="#" class="text-custom-text hover:text-custom-light-accent transition-colors duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M15 22s-4 0-5-2c-.5-1-1-1.5-1-1.5s-1 .5-2 1c-1.2 1.2-1.5.5-1.5.5s-1.5 1-2 1.5c-1.5-1-2-2-2.5-3"></path><path d="M22 15s-2 1-3.5 1.5c-1.5.5-2.5.5-2.5.5c-.5 0-.5 1-1 1.5c-.5.5-1 .5-1.5.5-1 0-1.5-.5-2-1c-1-1-1-1.5-1-1.5-1.5-1-2.5-1-2.5-1"></path></svg>
                     </a>
+                </div>
+                
+                <!-- New WhatsApp Form Section -->
+                <div class="w-full max-w-xl mt-12 bg-custom-dark p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-center text-white mb-6">Send Me a Message</h3>
+                    <form id="whatsapp-form" onsubmit="event.preventDefault(); sendWhatsAppMessage();">
+                        <div class="space-y-4">
+                            <textarea id="whatsapp-message" placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg bg-custom-medium text-custom-text placeholder-custom-text-secondary focus:outline-none focus:ring-2 focus:ring-custom-accent transition duration-300" required></textarea>
+                            <button type="submit" class="w-full bg-green-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-green-600 transition duration-300 flex items-center justify-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10c1.5 0 2.9-.4 4.2-1.2l-1.5-1.2c-.8.5-1.7.8-2.7.8-4.2 0-7.5-3.3-7.5-7.5S7.8 4.5 12 4.5s7.5 3.3 7.5 7.5c0 1.2-.3 2.3-.8 3.3l1.2 1.5c.8-1.3 1.2-2.7 1.2-4.2 0-5.5-4.5-10-10-10z"></path><path d="M16 11c0-.6-.4-1-1-1h-2v-2c0-.6-.4-1-1-1s-1 .4-1 1v2h-2c-.6 0-1 .4-1 1s.4 1 1 1h2v2c0 .6.4 1 1 1s1-.4 1-1v-2h2c.6 0 1-.4 1-1z"></path></svg>
+                                <span>Send WhatsApp Message</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -346,6 +360,14 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // Function to send a WhatsApp message
+        function sendWhatsAppMessage() {
+            const message = document.getElementById('whatsapp-message').value;
+            const phoneNumber = '+919346334918'; // Replace with your own phone number
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
     </script>
 </body>
 </html>
