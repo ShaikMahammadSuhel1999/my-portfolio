@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Mahammad Suhel - Portfolio</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'custom-dark': '#1e293b',
+                        'custom-medium': '#334155',
+                        'custom-accent': '#60a5fa',
+                        'custom-light-accent': '#93c5fd',
+                        'custom-text': '#e2e8f0',
+                        'custom-text-secondary': '#cbd5e1',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+
+        /* Set scrollbar style for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        
+        .icon-svg {
+            display: inline-block;
+            stroke-width: 2.5;
+            stroke: currentColor;
+            fill: none;
+            line-height: 1;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-inter">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-custom-dark/90 backdrop-blur-sm shadow-lg">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-custom-accent">Lets<span class="text-white">Connect</span></a>
+            
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-custom-light-accent transition duration-300">About</a></li>
+                <li><a href="#projects" class="hover:text-custom-light-accent transition duration-300">Projects</a></li>
+                <li><a href="#skills" class="hover:text-custom-light-accent transition duration-300">Skills</a></li>
+                <li><a href="#contact" class="hover:text-custom-light-accent transition duration-300">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Nav Button -->
+            <button id="mobile-menu-button" class="md:hidden text-custom-text focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-custom-dark pb-4">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#about" class="block w-full text-center hover:text-custom-light-accent transition duration-300 py-2">About</a></li>
+                <li><a href="#projects" class="block w-full text-center hover:text-custom-light-accent transition duration-300 py-2">Projects</a></li>
+                <li><a href="#skills" class="block w-full text-center hover:text-custom-light-accent transition duration-300 py-2">Skills</a></li>
+                <li><a href="#contact" class="block w-full text-center hover:text-custom-light-accent transition duration-300 py-2">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[80vh] flex flex-col items-center justify-center text-center">
+            <div class="space-y-6">
+                <!-- Profile picture -->
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQHx_PxHEpP3eg/profile-displayphoto-shrink_400_400/B56ZUSO9InGoAg-/0/1739767665965?e=1758153600&v=beta&t=aT2mSpQjbKok7Tn4AHXd0idFiRXpx-lGaoysfdvK7vY" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/150x150/1e293b/94a3b8?text=DP';" 
+                     alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto shadow-xl object-cover">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+                    Hello, I'm <span class="text-custom-accent">Shaik Mahammad Suhel</span>
+                </h1>
+                <!-- The text below is centered using a max-w and mx-auto on the paragraph element itself -->
+                <p class="text-lg sm:text-xl text-custom-text-secondary max-w-2xl mx-auto">
+                    An Industrial Engineering professional specializing in Supply Chain Management and Operational Excellence, dedicated to optimizing systems and driving productivity.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                    <!-- CV Download Button (Updated to a proper anchor tag) -->
+                    <a href="https://drive.google.com/file/d/1HzxdYRXIITRZ3r5vzdtjDF8kjPH9qlSC/view?usp=sharing" class="bg-custom-accent text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-custom-light-accent transition duration-300">
+                        Download CV
+                    </a>
+                    <a href="#contact" class="border border-custom-accent text-custom-accent font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-custom-accent hover:text-white transition duration-300">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="bg-custom-dark p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-white mb-8">About Me</h2>
+                <!-- Changed to a simple column layout to ensure the image is always below the text -->
+                <div class="flex flex-col items-center gap-8">
+                    <div class="w-full">
+                        <p class="text-custom-text-secondary leading-relaxed text-justify mb-4">
+                           I hold a Master’s degree in Production and Industrial Engineering from IIT Roorkee and currently serve as a Lean Consultant and Supply Chain Specialist at Gemba Concepts Private Limited. I am presently engaged with a leading private sector client in the electrical manufacturing industry, supporting them in optimizing inventory management, procurement, and logistics operations. With 2.2 years of professional experience at Tata Consultancy Services and Solverminds Solutions and Technologies, I have successfully delivered impactful projects across Supply Chain, Logistics, and Healthcare domains.
+                        </p>
+                        <p class="text-custom-text-secondary leading-relaxed text-justify">
+                            My expertise spans Operations Research, Lean Six Sigma, Machine Learning, and continuous improvement methodologies. I specialize in developing mathematical models, implementing process optimizations, and creating automated applications to tackle complex business challenges, streamline workflows, and enhance productivity. I have a proven track record of reducing costs, improving efficiency, and driving measurable business outcomes through data-driven strategies and Lean Six Sigma practices.
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                        <!-- About Me image -->
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQEr9CMPEF6kPA/feedshare-shrink_2048_1536/B56ZdHIY3iHUAo-/0/1749245077200?e=1758153600&v=beta&t=iKrpkShMaSs05ijCoWKKvL7Nasu1ZnA798XiEVEVvvU"
+           alt="Shaik Mahammad Suhel Work Showcase"
+           class="mx-auto rounded-xl shadow-xl max-w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Cost Saving Allocations -->
+<div class="bg-custom-dark p-6 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+    
+    <!-- Updated Image -->
+    <img src="https://www.materialhandlingsolutions.com/wp-content/uploads/2023/12/AdobeStock_622375139-1024x574.jpeg" 
+         alt="Cost Saving Allocations" 
+         class="rounded-xl mb-4 shadow-xl">
+    
+    <h3 class="text-xl font-semibold text-white mb-2">Cost Saving Allocations using Game Theory</h3>
+    
+    <p class="text-custom-text-secondary mb-4">
+        Developed a MILP model to reduce transport costs by 30% for logistics providers. Utilized cooperative game theory for fair cost and profit allocation.
+    </p>
+    
+</div>
+
+               <!-- Project Card 2: Healthcare Excellence -->
+<div class="bg-custom-dark p-6 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+
+    <!-- Updated Image -->
+    <img src="https://illinois.touro.edu/media/schools-and-colleges/tcil/images/misc-images/data-analytics-charts.jpg" 
+         alt="Healthcare Excellence" 
+         class="rounded-xl mb-4 shadow-xl">
+
+    <h3 class="text-xl font-semibold text-white mb-2">Elevating Healthcare Excellence</h3>
+
+    <p class="text-custom-text-secondary mb-4">
+        Analyzed patient survey data and modeled hospital processes to reduce patient wait times by 25%. 
+        Utilized queuing theory, Pareto charts, and Ishikawa diagrams.
+    </p>
+    
+</div>
+
+
+                <!-- Project Card 3: Value Driven Design -->
+<div class="bg-custom-dark p-6 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+    <div class="flex justify-center items-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILv_KqS6P2GimNUUos-bfqVgKovosU6ObUpSywVZbkvCYdVHQxRPsZYOSING_2qqhvs0&usqp=CAU" 
+             alt="Value Driven Design" 
+             class="rounded-xl mb-4 shadow-xl max-w-full h-auto">
+    </div>
+    <h3 class="text-xl font-semibold text-white mb-2 text-center">Value Driven Design of a Water Bottle</h3>
+    
+    <p class="text-custom-text-secondary mb-4 text-center">
+        Re-engineered a water bottle design with a copper lining, improving its value index by optimizing cost, strength, and aesthetics while preserving functionality.
+    </p>
+    
+</div>
+
+
+               <!-- Project Card 4: Electric Scooter -->
+<div class="bg-custom-dark p-6 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+    <div class="flex justify-center items-center">
+        <img src="https://www.financialexpress.com/wp-content/uploads/2023/10/Honda-SC-e-feature.jpg?w=350" 
+             alt="Electric Scooter with Auto-Charging System" 
+             class="rounded-xl mb-4 shadow-xl max-w-full h-auto">
+    </div>
+
+    <h3 class="text-xl font-semibold text-white mb-2 text-center">Electric Scooter with Auto-Charging System</h3>
+    <p class="text-custom-text-secondary mb-4 text-center">
+        Engineered an e-scooter with a hub dynamo to convert kinetic energy into electricity, improving mileage by 19% and enhancing charging efficiency.
+    </p>
+
+    
+</div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <!-- Languages -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Python</h4>
+                </div>
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"></path><path d="M21 19c0 1.66-4.03 3-9 3s-9-1.34-9-3"></path></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">SQL</h4>
+                </div>
+                <!-- Data Visualization Tools -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Power BI</h4>
+                </div>
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M12.5 16.5 16 11l-3.5-5.5"></path><path d="M14.5 9 10 3.5 5.5 9"></path><path d="m14 17-5 5-5-5"></path><path d="M16 11v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">MS Excel</h4>
+                </div>
+                <!-- Process Improvement -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M12.5 16.5 16 11l-3.5-5.5"></path><path d="M14.5 9 10 3.5 5.5 9"></path><path d="m14 17-5 5-5-5"></path><path d="M16 11v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Process Improvement</h4>
+                </div>
+                <!-- Lean Six Sigma -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M12 12c-2.4 0-4-2-4-4S9.6 4 12 4s4 2 4 4-1.6 4-4 4zm0 4c-3.6 0-6 2.2-6 6h12c0-3.8-2.4-6-6-6z"></path></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Lean Six Sigma</h4>
+                </div>
+                <!-- Project Management -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><rect width="18" height="18" x="3" y="3" rx="2"></rect><line x1="9" x2="9" y1="3" y2="21"></line><line x1="15" x2="15" y1="3" y2="21"></line><line x1="3" x2="21" y1="9" y2="9"></line><line x1="3" x2="21" y1="15" y2="15"></line></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Project Management</h4>
+                </div>
+                <!-- Machine Learning -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M21 12.79A10 10 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Machine Learning</h4>
+                </div>
+                <!-- Optimization Techniques -->
+                <div class="bg-custom-dark p-6 rounded-2xl shadow-xl flex flex-col items-center text-center">
+                    <span class="text-4xl text-custom-accent mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10h1v4"></path><path d="M12 10h1v4"></path><path d="M17 10h1v4"></path></svg>
+                    </span>
+                    <h4 class="font-semibold text-white">Optimization</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Get in Touch</h2>
+            <div class="flex flex-col items-center gap-6">
+                <!-- Contact Info -->
+                <p class="text-custom-text-secondary leading-relaxed text-center">I'm currently open to new opportunities and collaborations. Feel free to connect with me on social media.</p>
+                
+                <!-- Contact Details -->
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <span class="text-custom-text">inventor.suhel@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2.02 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.3.93.64 1.86.99 2.75a2 2 0 0 1-.27 2.19l-.59.59a2 2 0 0 0-.29 2.22c.16.2.33.4.53.59h.01a15.84 15.84 0 0 0 5.2 5.2c.19.2.39.37.59.53a2 2 0 0 0 2.22-.29l.59-.59a2 2 0 0 1 2.19-.27c.89.35 1.82.68 2.75.99a2 2 0 0 1 1.72 2z"></path></svg>
+                        <span class="text-custom-text">+91 9346334918</span>
+                    </div>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center space-x-4 mt-4">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/shaik007" target="_blank" class="flex items-center gap-2 text-custom-text hover:text-custom-light-accent transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M16 8a6 6 0 0 0-6 6v7h4v-7a2 2 0 1 1 4 0v7h4v-7a6 6 0 0 0-6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>www.linkedin.com/in/shaik007</span>
+                    </a>
+                    <!-- GitHub placeholder (replace with your link if available) -->
+                    <a href="#" class="text-custom-text hover:text-custom-light-accent transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg"><path d="M15 22s-4 0-5-2c-.5-1-1-1.5-1-1.5s-1 .5-2 1c-1.2 1.2-1.5.5-1.5.5s-1.5 1-2 1.5c-1.5-1-2-2-2.5-3"></path><path d="M22 15s-2 1-3.5 1.5c-1.5.5-2.5.5-2.5.5c-.5 0-.5 1-1 1.5c-.5.5-1 .5-1.5.5-1 0-1.5-.5-2-1c-1-1-1-1.5-1-1.5-1.5-1-2.5-1-2.5-1"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-custom-dark py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-custom-text-secondary">
+            <p>&copy; 2024 Shaik Mahammad Suhel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
